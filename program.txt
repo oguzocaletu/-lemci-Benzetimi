@@ -1,0 +1,33 @@
+0x0000 addi x10 x0 A
+0x0004 addi x11 x0 A
+0x0008 addi x6 x0 1
+0x000c addi x12 x0 1
+
+0x0010 jal x1 2
+
+
+0x0014 blt x11 x6 14
+0x0018 add x13 x11 x0
+0x001c add x14 x12 x0
+0x0020 jal x2 2
+0x0024 beq x13 x6 8
+0x0028 add x12 x12 x14
+0x002c subi x13 x13 1
+0x0030 jalr x0 x2 0
+
+0x0034 subi x11 x11 1
+0x0038 jalr x0 x1 0
+
+0x003c add x11 x12 x0
+0x0040 add x7 x11 x0
+0x0044 addi x9 x0 4
+0x0048 jal x3 2
+0x004c blt x7 x9 6
+0x0050 subi x7 x7 4
+0x0054 jalr x0 x3 0
+0x0058 addi x9 x0 3
+0x005c beq x7 x9 6
+0x0060 addi x10 x0 1
+0x0064 SON
+0x0068 addi x10 x0 0
+0x006c SON
